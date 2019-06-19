@@ -23,14 +23,17 @@ func main() {
 	twos := 0
 	threes := 0
 
+	// for each line
 	for scanner.Scan() {
 		line := scanner.Text()
 		count := make(map[rune]uint)
 
+		// map the character counts
 		for _, c := range line {
 			count[c]++
 		}
 
+		// see if there are character counts of two
 		for _, v := range count {
 			if v == 2 {
 				twos++
@@ -38,6 +41,7 @@ func main() {
 			}
 		}
 
+		// see if there are any character counts of three
 		for _, v := range count {
 			if v == 3 {
 				threes++
