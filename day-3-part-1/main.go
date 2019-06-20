@@ -65,7 +65,7 @@ func (grid *Grid) addClaim(claim Claim) {
 
 // inchesClaimedTwice will return the number of square inches on the grid
 // that were claimed by at least two claims
-func (grid Grid) inchesClaimedTwice() int {
+func (grid *Grid) inchesClaimedTwice() int {
 	ret := 0
 
 	for x := 0; x < maxWidth; x++ {
